@@ -1,0 +1,6 @@
+<!--pages/index/bannerDetail/bannerDetail.wxml-->
+<view class="title">{{banner.title}}</view>
+<view class="content">
+  <rich-text nodes="{{banner.content}}">
+    </rich-text>
+</view>

@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/search/search",
+    "pages/mine/index",
+    "pages/mine/manager/manager",
+    "pages/category/index",
+    "pages/mine/collect/collect",
+    "pages/mine/myOrder/evaluation/evaluation",
+    "pages/cart/index",
+    "pages/mine/myOrder/myOrder",
+    "pages/order/order",
+    "pages/index/bannerDetail/bannerDetail",
+    "pages/index/cateDetail/cateDetail",
+    "pages/goodsDetail/goodsDetail",
+    "pages/mine/contact/contact",
+    "pages/mine/feedback/feedback"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF4500",
+    "navigationBarTitleText": "U点餐",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#FF4500",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/home.png",
+        "selectedIconPath": "/images/home_on.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "/images/category.png",
+        "selectedIconPath": "/images/category_on.png"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "/images/cart.png",
+        "selectedIconPath": "/images/cart_on.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "/images/mine.png",
+        "selectedIconPath": "/images/mine_on.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息用于快速录入检查地点"
+    }
+  }
+}

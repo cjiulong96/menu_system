@@ -1,0 +1,37 @@
+/* pages/index/cateDetail/cateDetail.wxss */
+
+.goods {
+  margin-top: 20rpx;
+  display: flex;
+  padding: 0 20rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.goods-img {
+  width: 345rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+  display: block;
+}
+
+.goods-title {
+  font-size: 30rpx;
+  font-weight: 700;
+  margin: 8rpx 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 330rpx;
+}
+
+.goods-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin: 10rpx 10rpx 30rpx 10rpx;
+  font-size: 30rpx;
+}
+
+.goods-price {
+  font-weight: 700;
+}

@@ -1,0 +1,23 @@
+<!--pages/mine/collect/collect.wxml-->
+<block wx:for="{{collectList}}" wx:key="_id">
+  <view class="item-wrap flex-row">
+    <view class="item-right flex-row" bindtap="toGoodsDetail" data-id="{{item.goodsId}}">
+      <view class="item-img">
+        <image src="{{item.cover}}" mode="" />
+      </view>
+      <view class="item-content flex-col-around">
+        <view class="item-title">{{item.name}}</view>
+        <view class="item-bottom flex-between">
+          <view class="item-price theme-color">￥{{item.price}}</view>
+          <view class="item-count flex-row">
+            <button plain size="mini" catchtap="cancel_collect" data-index="{{index}}">取消收藏</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<view class="empty flex-center" wx:if="{{!collectList.length}}">
+  暂无收藏~
+</view>

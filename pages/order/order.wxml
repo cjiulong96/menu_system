@@ -1,0 +1,56 @@
+<!--pages/order/order.wxml-->
+<!-- <view class="address-info">地址信息：</view>
+<view class="add-address">
+  <view bindtap="addAddress">
+    添加地址
+  </view>
+</view> -->
+<view class="tableNumber" wx:if="{{tableNumber}}">
+  桌号：<text>{{tableNumber}}</text>
+</view>
+<view class="order-info">订单明细：</view>
+<block wx:for="{{orderList}}" wx:key="_id">
+  <view class="item-wrap flex-row" bindtap="toGoodsDetail" data-id="{{item._id}}">
+    <view class="item-right flex-row">
+      <view class="item-img">
+        <image src="{{item.cover}}" mode="aspectFill" />
+      </view>
+      <view class="item-content flex-col-around">
+        <view class="item-title">{{item.name}}</view>
+        <view class="item-bottom flex-between">
+          <view class="item-price theme-color">￥{{item.price}}</view>
+          <view class="item-count flex-row">
+            <image src="/images/minus.png" mode="" class="minus-btn btn" catchtap="minus" data-index="{{index}}" />
+            <text class="count">{{item.count}}</text>
+            <image src="/images/plus.png" mode="" class="plus-btn btn" data-index="{{index}}" catchtap="plus" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+
+<!-- 备注 -->
+<view class="remark">
+  <view class="remark-title">
+    备注：
+  </view>
+  <input bindinput="getInpVal" placeholder="请输入备注信息" confirm-type="done" />
+</view>
+
+<!-- tabbar -->
+<view class="tabbar flex-between">
+  <view class="total">共{{total}}件</view>
+  <view class="right flex-center">
+    <view class="price-box flex-center">
+      <view>合计：</view>
+      <view class="theme-color flex-center">
+        ￥
+        <view class="totalPrice">
+          {{totalPrice}}
+        </view>
+      </view>
+    </view>
+    <view class="btn-box" bindtap="addOrder">提交订单</view>
+  </view>
+</view>

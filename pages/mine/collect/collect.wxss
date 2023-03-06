@@ -1,0 +1,61 @@
+/* pages/mine/collect/collect.wxss */
+
+.item-wrap {
+  display: flex;
+  margin: 20rpx;
+}
+.item-wrap .item-right {
+  flex: 1;
+}
+
+.item-wrap .item-right .btn {
+  width: 40rpx;
+  height: 40rpx;
+}
+.item-wrap .item-right .count {
+  margin: 0 10rpx;
+}
+.item-wrap .item-img {
+  margin: 0 20rpx 0 10rpx;
+}
+.item-wrap .item-img image {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+}
+.item-wrap .item-right .item-content {
+  flex: 1;
+  height: 150rpx;
+}
+
+.tabbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 0 0 20rpx;
+  height: 80rpx;
+}
+
+.tabbar .btn-box {
+  padding: 0 60rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-left: 40rpx;
+  background-color: orangered;
+  color: #fff;
+}
+.item-count button {
+  color: orangered;
+  font-size: 24rpx;
+  border-color: orangered;
+  font-weight: normal;
+}
+.empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

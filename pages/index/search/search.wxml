@@ -1,0 +1,28 @@
+<!--pages/index/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="search-box theme-bg">
+  <input class="search-input" type="text" placeholder-class="search-input-placeholder" placeholder="请输入内容" bindinput="getInpVal" />
+  <image class="search-image" src="/images/search.png"></image>
+  <view class="search-btn" bindtap="do_search">搜索</view>
+</view>
+
+<!-- 菜品 -->
+<view class="goods" wx:if="{{goodsList.length}}">
+  <block wx:for="{{goodsList}}" wx:key="_id">
+    <view class="goods-item" bindtap="toGoodsDetail" data-id="{{item._id}}">
+      <image src="{{item.cover}}" class="goods-img" mode="aspectFill" lazy-load="{{true}}"></image>
+      <view class="item-right flex-col-around">
+        <view class="goods-title">{{item.name}}</view>
+        <view class="goods-bottom">
+          <view class="goods-sale">
+            已售
+            <text>{{item.sales || 0}}</text>
+          </view>
+          <view class="theme-color goods-price">￥{{item.price}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<view class="empty" wx:if="{{!goodsList.length}}">暂无商品~</view>

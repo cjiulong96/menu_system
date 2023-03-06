@@ -1,0 +1,11 @@
+/* pages/index/bannerDetail/bannerDetail.wxss */
+.title {
+  font-size: 44rpx;
+  font-weight: 700;
+  margin: 20rpx 0;
+  text-align: center;
+}
+.content {
+  text-align: center;
+  margin: 0 20rpx;
+}

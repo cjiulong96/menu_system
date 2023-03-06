@@ -1,0 +1,47 @@
+<block wx:if="{{detail._id}}">
+  <!--pages/goodsDetail/goodsDetail.wxml-->
+  <image src="{{detail.cover}}" class="image-cover" lazy-load="{{true}}" mode="aspectFill"></image>
+
+  <view class="detail-price-wrap">
+    <view class="theme-color price">￥{{detail.price}}</view>
+    <view class="sales">
+      已售
+      <text>{{detail.sales}}</text>
+    </view>
+  </view>
+
+  <view class="title-wrap">
+    <view class="title">{{detail.name}}</view>
+    <button open-type="share" size="mini" class="flex-center">
+      <image src="/images/share.png" mode="" class="share-icon" lazy-load="{{true}}"/>
+    </button>
+  </view>
+
+  <view class="goods-de">
+    <view class="de-title">商品详情</view>
+    <view class="de-content">{{detail.content}}</view>
+  </view>
+
+  <view style="height: 120rpx;"></view>
+  <!--  -->
+  <view class="tabbar">
+    <view class="cart-left flex-center">
+      <view class="cart-image collect" bindtap="do_collect">
+        <image src="{{isCollect ? '/images/collect_on.png' : '/images/collect.png'}}" mode="" />
+      </view>
+      <view class="cart-image" bindtap="to_cart">
+        <image src="/images/cart.png" mode="" />
+        <text class="theme-bg cartNum" wx:if="{{cartList.length}}">{{cartList.length}}</text>
+      </view>
+    </view>
+
+    <view class="cart-btns">
+      <view class="cart-btn cart-add" bindtap="addCart">
+        加入购物车
+      </view>
+      <view class="cart-btn cart-buy" bindtap="toOrder">
+        立即购买
+      </view>
+    </view>
+  </view>
+</block>

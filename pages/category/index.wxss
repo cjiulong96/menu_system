@@ -1,0 +1,90 @@
+/* pages/category/index.wxss */
+.aside {
+  display: flex;
+  height: 100vh;
+}
+
+.aside .aside-left {
+  width: 200rpx;
+  background-color: #f7f7f7;
+  padding-top: 30rpx;
+}
+
+.aside .left-item {
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.aside .item-actived {
+  color: orangered;
+  background-color: #fff;
+}
+
+.aside .aside-right {
+  padding: 30rpx;
+  flex: 1;
+}
+
+.aside .aside-right .right-item {
+  margin-bottom: 30rpx;
+}
+
+.aside-right .right-item {
+  margin-bottom: 16rpx;
+}
+
+.aside-right .right-item .goods-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 34rpx;
+}
+
+.aside .item-content {
+  display: flex;
+}
+
+.item-goods-img {
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.aside-right .goods-img {
+  width: 150rpx;
+  height: 150rpx;
+  display: block;
+}
+
+.aside-right .item-goods-desc {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.aside-right .goods-steps .goods-count {
+  margin: 0 16rpx;
+  line-height: 50rpx;
+  font-size: 34rpx;
+}
+
+.aside-right .sales-count {
+  margin-left: 8rpx;
+}
+
+.goods-sales {
+  padding: 0 0 40rpx 0;
+  font-size: 24rpx;
+  color: #999;
+  width: 150rpx;
+}
+.goods-price {
+  font-weight: 700;
+  font-size: 34rpx;
+}
+
+.count-btn image{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+}

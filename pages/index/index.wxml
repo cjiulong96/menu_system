@@ -1,0 +1,52 @@
+<view class="theme-bg tableNumber" wx:if="{{tableNumber}}">
+  桌号：<text>{{tableNumber}}</text>
+</view>
+<!-- 搜索框 -->
+<view class="search-box theme-bg" bindtap="toSearch">
+  <input class="search-input" type="text" placeholder="请输入内容" disabled="true" />
+  <image class="search-image" src="/images/search.png" lazy-load="{{true}}"></image>
+</view>
+
+<!-- 轮播图 -->
+<view class="swiper-wrap" wx:if="{{bannerList.length}}">
+  <swiper class="swiper-box" circular indicator-dots indicator-active-color="#FF4500" autoplay>
+
+    <block wx:for="{{bannerList}}" wx:key="_id">
+      <swiper-item class="swiper-box-item">
+        <image mode="aspectFill" lazy-load="{{true}}" bindtap="toBannerDetail" data-id="{{item._id}}" class="swiper-box-image" src="{{item.cover}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 分类 -->
+<view class="type-wrap flex-around" wx:if="{{categoryList.length}}">
+  <view class="type-item" bindtap="do_scanCode">
+    <image src="/images/scan.png" mode="aspectFill" class="type-img" lazy-load="{{true}}" />
+    <view class="type-name">扫一扫</view>
+  </view>
+  <block wx:for="{{categoryList}}" wx:key="_id">
+    <view class="type-item flex-col-center" bindtap="toCateDetail" data-id="{{item._id}}">
+      <image src="{{item.image}}" mode="aspectFill" class="type-img" lazy-load="{{true}}"></image>
+      <view class="type-name">{{item.name}} </view>
+    </view>
+  </block>
+</view>
+
+<!-- 菜品 -->
+<view class="goods" wx:if="{{goodsList.length}}">
+  <block wx:for="{{goodsList}}" wx:key="_id">
+    <view class="goods-item" bindtap="toGoodsDetail" data-id="{{item._id}}">
+      <image src="{{item.cover}}" class="goods-img" mode="aspectFill" lazy-load="{{true}}"></image>
+      <view class="goods-title">{{item.name}}</view>
+      <view class="goods-bottom">
+        <view class="goods-sale">
+          已售
+          <text>{{item.sales || 0}}</text>
+        </view>
+        <view class="theme-color goods-price">￥{{item.price}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+<view style="height: 0;"></view>

@@ -1,0 +1,40 @@
+<!--pages/cart/index.wxml-->
+<block wx:for="{{cartList}}" wx:key="_id">
+  <view class="item-wrap flex-row">
+    <label>
+      <checkbox checked="{{item.checked}}" color="#FF4500" data-checked="{{item.checked}}" data-index="{{index}}" catchtap="checkboxChange" />
+    </label>
+    <view class="item-right flex-row">
+      <view class="item-img" bindtap="toGoodsDetail" data-id="{{item._id}}">
+        <image src="{{item.cover}}" mode="aspectFill" />
+      </view>
+      <view class="item-content flex-col-around">
+        <view class="item-title" bindtap="toGoodsDetail" data-id="{{item._id}}">{{item.name}}</view>
+        <view class="item-bottom flex-between">
+          <view class="item-price theme-color" bindtap="toGoodsDetail" data-id="{{item._id}}">￥{{item.price}}</view>
+          <view class="item-count flex-row">
+            <image src="/images/minus.png" mode="" class="minus-btn btn" catchtap="minus" data-index="{{index}}" />
+            <text class="count">{{item.count}}</text>
+            <image src="/images/plus.png" mode="" class="plus-btn btn" data-index="{{index}}" catchtap="plus" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<view class="empty flex-center" wx:if="{{!cartList.length}}">
+  暂无商品~
+</view>
+<!-- tabbar -->
+<view class="tabbar flex-between" wx:if="{{cartList.length}}">
+  <label class="flex-center">
+    <checkbox checked="{{allChecked}}" color="#FF4500" bindtap="allChecked" />全选
+  </label>
+  <view class="right flex-center">
+    <view class="price-box">
+      <text>合计：</text>
+      <text class="theme-color totalPrice">￥{{totalPrice}}</text>
+    </view>
+    <view class="btn-box" bindtap="toOrder">选好了</view>
+  </view>
+</view>

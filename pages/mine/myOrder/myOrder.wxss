@@ -1,0 +1,78 @@
+/* pages/mine/myOrder/myOrder.wxss */
+.menu-wrap {
+  margin: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+.item-remark {
+  margin-bottom: 20rpx;
+}
+.menu-wrap .menu-item {
+  padding: 20rpx 0;
+  border-bottom: 4rpx solid transparent;
+}
+
+.menu-wrap .menu-item-on {
+  border-bottom-color: orangered;
+}
+.list-wrap {
+  margin: 128rpx 0 20rpx 0;
+  overflow: hidden;
+  height: calc(100vh - 128rpx - 20rpx);
+}
+.list-order-wrap {
+  height: 100%;
+  overflow: auto;
+}
+.order-wrap {
+  margin: 20rpx;
+  border-bottom: 1rpx solid #eee;
+}
+
+.order-wrap .order-id {
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+}
+.order-wrap .order-bottom {
+  margin: 16rpx 0 20rpx 0;
+}
+.order-wrap .totalPrice {
+  text-align: right;
+  font-weight: 700;
+}
+.order-wrap .pay-btn {
+  text-align: right;
+  margin-bottom: 10rpx;
+}
+.order-wrap .pay-btn button{
+  background-color: orangered;
+  color: #fff;
+  font-size: 28rpx;
+}
+.goods-wrap .goods-right {
+  flex: 1;
+  margin-left: 20rpx;
+  height: 160rpx;
+}
+.goods-wrap .goods-name {
+  font-size: 34rpx;
+  font-weight: 700;
+}
+.goods-wrap .goods-img {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+}
+
+.no-order {
+  margin: 200rpx 0;
+  text-align: center;
+}
+
+.tableNumber {
+  margin-bottom: 10rpx;
+}

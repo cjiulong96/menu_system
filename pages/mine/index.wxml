@@ -1,0 +1,36 @@
+<!--pages/mine/index.wxml-->
+<view class="head-wrap flex-center">
+  <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/images/headicon.png'}}" class="head-icon" mode="" />
+
+</view>
+<view class="nickName flex-center" wx:if="{{userInfo}}">
+  {{userInfo.nickName}}
+</view>
+<view class="login-btn flex-center" wx:if="{{!userInfo}}">
+  <button bindtap="do_login">登录</button>
+</view>
+
+<view class="nav-wrap flex-around" wx:if="{{userInfo}}">
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="0">
+    <image src="/images/cooking.png" mode="" />
+    <view>制作中</view>
+  </view>
+  <!-- <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="1">
+    <image src="/images/waitCar.png" mode="" />
+    <view>待收货</view>
+  </view> -->
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="2">
+    <image src="/images/evaluate.png" mode="" />
+    <view>待评价</view>
+  </view>
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="3">
+    <image src="/images/done.png" mode="" />
+    <view>已完成</view>
+  </view>
+</view>
+
+<view class="menu-item" wx:if="{{userInfo.isManager}}" bindtap="toManager">后厨管理</view>
+<view class="menu-item" wx:if="{{userInfo}}" bindtap="toCollect">我的收藏</view>
+<view class="menu-item" bindtap="toContact">在线客服</view>
+<view class="menu-item" bindtap="toFeedback">意见反馈</view>
+<view class="menu-item" wx:if="{{userInfo}}" bindtap="do_loginout">退出登录</view>

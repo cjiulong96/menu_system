@@ -42,7 +42,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.30.2",
   "appid": "wxf9ef025a3886b6b1",
-  "projectname": "order_system",
+  "projectname": "menu_system",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",

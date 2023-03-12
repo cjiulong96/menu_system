@@ -52,6 +52,7 @@
   background-color: orangered;
   color: #fff;
   font-size: 28rpx;
+  margin-left: 10rpx;
 }
 .goods-wrap .goods-right {
   flex: 1;

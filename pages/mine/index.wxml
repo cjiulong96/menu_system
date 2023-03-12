@@ -11,20 +11,24 @@
 </view>
 
 <view class="nav-wrap flex-around" wx:if="{{userInfo}}">
-  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="0">
-    <image src="/images/cooking.png" mode="" />
-    <view>制作中</view>
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="-1">
+    <image src="/images/cancel.png" mode="aspectFill" />
+    <view>已取消</view>
   </view>
-  <!-- <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="1">
-    <image src="/images/waitCar.png" mode="" />
-    <view>待收货</view>
-  </view> -->
-  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="2">
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="0">
+    <image src="/images/wait.png" mode="aspectFill" />
+    <view>待支付</view>
+  </view>
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="1">
+    <image src="/images/accept.png" mode="aspectFill" />
+    <view>已接单</view>
+  </view>
+  <!-- <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="2">
     <image src="/images/evaluate.png" mode="" />
     <view>待评价</view>
-  </view>
-  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="3">
-    <image src="/images/done.png" mode="" />
+  </view> -->
+  <view class="nav-item flex-col-center" bindtap="toMyOrder" data-index="2">
+    <image src="/images/done.png" mode="aspectFill" />
     <view>已完成</view>
   </view>
 </view>

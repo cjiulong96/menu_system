@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    status: 0,
+    status: 1,
   },
 
   /**

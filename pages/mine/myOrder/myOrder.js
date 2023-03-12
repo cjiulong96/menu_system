@@ -58,7 +58,7 @@ Page({
         if (res.confirm) {
           db.collection('menu_orders').doc(currentOrder._id).update({
             data: {
-              status: 0,
+              status: 1,
             }
           }).then(res => {
             wx.showToast({
@@ -100,7 +100,7 @@ Page({
         if (res.confirm) {
           db.collection('menu_orders').doc(currentOrder._id).update({
             data: {
-              status: -2,
+              status: -1,
             }
           }).then(res => {
             wx.showToast({

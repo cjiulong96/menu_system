@@ -1,10 +1,10 @@
 <!--pages/mine/myOrder/myOrder.wxml-->
 <view class="menu-wrap flex-around">
-  <view class="menu-item {{status=== -1 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="-1">待支付</view>
-  <view class="menu-item {{status=== 0 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="0">制作中</view>
-  <!-- <view class="menu-item {{status=== 1 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="1">待收货</view> -->
-  <view class="menu-item {{status=== 2 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="2">待评价</view>
-  <view class="menu-item {{status=== 3 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="3">已完成</view>
+  <view class="menu-item {{status=== -1 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="-1">已取消</view>
+  <view class="menu-item {{status=== 0 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="0">待支付</view>
+  <view class="menu-item {{status=== 1 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="1">已接单</view>
+  <view class="menu-item {{status=== 2 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="2">已完成</view>
+  <!-- <view class="menu-item {{status=== 3 ? 'menu-item-on' : ''}}" bindtap="handleMenu" data-type="3">已完成</view> -->
 </view>
 <view class="list-wrap">
   <view class="list-order-wrap">
@@ -44,9 +44,9 @@
           </view>
 
           <view class="pay-btn">
-            <button wx:if="{{status === -1}}" size="mini" bindtap="do_pay" data-index="{{index}}">支付</button>
+            <button wx:if="{{status === 0}}" size="mini" bindtap="do_pay" data-index="{{index}}">支付</button>
             <button wx:if="{{status === 0}}" size="mini" data-index="{{index}}" bindtap="do_cancel">取消订单</button>
-            <button wx:if="{{status === 1}}" size="mini" data-index="{{index}}" bindtap="do_confirm">确认收货</button>
+            <!-- <button wx:if="{{status === 1}}" size="mini" data-index="{{index}}" bindtap="do_confirm">确认收货</button> -->
             <button wx:if="{{status === 2}}" size="mini" data-index="{{index}}" bindtap="do_evaluation">去评价</button>
           </view>
         </view>
